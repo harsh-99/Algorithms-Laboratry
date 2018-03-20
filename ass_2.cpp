@@ -70,7 +70,7 @@ void swap(int* a, int* b)
     *a = *b;
     *b = t;
 }
-int binarySearch(int s, int l, int r, int x)
+int binarySearch(int s[], int l, int r, int x)
 {
    if (r >= l)
    {
@@ -94,6 +94,7 @@ int partition(int m[], int low, int high, int s[]){
 	int i;
 	i = binarySearch(s,low,high,pivot);
 	int k = (low-1);
+	int t = high;
 	for(int j=low; j=(high-low); j++){
 		if(fitsin(m[j],s[i]) == -1){
 			swap(&m[j],&m[k]);	
